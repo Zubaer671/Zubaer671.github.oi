@@ -1,1 +1,0 @@
-console.log("Toko Gaul JB aktif!");
