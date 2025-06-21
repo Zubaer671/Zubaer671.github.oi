@@ -1,0 +1,1 @@
+Website Suntik Followers sederhana. Hanya simulasi tampilan frontend + penyimpanan lokal.
