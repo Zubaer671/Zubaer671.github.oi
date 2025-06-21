@@ -1,82 +1,101 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset dasar */
+* {
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
-  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffb6f9, #d8b4fe);
+  color: #4b006e;
 }
 
 header {
-  background: #111;
-  color: #fff;
-  padding: 1em;
+  background: #fff0f6;
+  padding: 20px;
   text-align: center;
+  border-bottom: 3px solid #ff8bd6;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff1493;
+  text-shadow: 1px 1px #fff;
+}
+
+nav {
+  background: #ffe4f2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
 }
 
 nav a {
-  margin: 0 1em;
-  color: #fff;
+  color: #b30086;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 16px;
+  background: #ffc9ec;
+  border-radius: 25px;
+  transition: 0.3s ease;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') no-repeat center center;
-  background-size: cover;
-  color: white;
-  padding: 4em 2em;
-  text-align: center;
+nav a:hover {
+  background: #f5a8d9;
+  color: #fff;
 }
 
-.hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.hero button {
-  background: #ff4b2b;
-  border: none;
-  color: white;
-  padding: 1em 2em;
-  font-size: 1em;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.produk {
-  padding: 2em;
-  text-align: center;
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: inline-block;
-  margin: 1em;
-  padding: 1em;
-  width: 200px;
+  background: #fff0fc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px dashed #ffbde8;
+  border-radius: 12px;
+  transition: 0.2s ease;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
+.card:hover {
+  transform: scale(1.02);
+  background: #ffe6f4;
 }
 
-.card button {
-  margin-top: 1em;
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 0.5em;
-  border-radius: 5px;
-  cursor: pointer;
+.card h2 {
+  font-size: 1.4rem;
+  color: #c2185b;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #6a005b;
 }
 
 footer {
-  background: #222;
-  color: #fff;
   text-align: center;
-  padding: 1em;
-  margin-top: 2em;
+  padding: 20px;
+  background: #fff0f6;
+  color: #c2185b;
+  border-top: 2px solid #ffcce5;
+}
+
+/* Optional: Tambahkan hiasan anime */
+.anime-girl {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 5px solid #ffe0f0;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
+  margin: 20px auto;
+  display: block;
 }
