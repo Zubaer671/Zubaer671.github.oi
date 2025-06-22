@@ -1,5 +1,5 @@
 const apiKey = '108696417505529782473708OKCTA2B431DA848FFF6CBEC1457C6971D1B1'; // ← Ganti dengan API key kamu
-const qrImg = document.getElementById('qrImage');
+const qrImg = document.getElementById('https://files.catbox.moe/7yn7rk.jpg');
 
 function fetchQR() {
   const timestamp = new Date().getTime(); // Supaya tidak cache
