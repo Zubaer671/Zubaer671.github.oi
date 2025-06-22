@@ -7,4 +7,4 @@ function fetchQR() {
 }
 
 fetchQR(); // Load pertama
-setInterval(fetchQR, 30000); // Refresh tiap 30 detik
+setInterval(fetchQR, 30000); // Refresh tiap 20 detik
