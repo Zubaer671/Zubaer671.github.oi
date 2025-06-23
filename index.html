@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beli & Bayar Otomatis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+  <header class="bg-purple-700 text-white text-center p-6 shadow">
+    <h1 class="text-3xl font-bold">KINDATIE STORE</h1>
+    <p class="text-sm mt-1">DI SINI SUDAH TERJAMIN AMANH TETSI MINTA AJA</p>
+  </header>
+
+  <!-- Form Data -->
+  <section class="p-4 text-center">
+    <h2 class="text-lg font-semibold mb-2">Isi Data Pembeli</h2>
+    <input id="nama" type="text" placeholder="Nama Kamu" class="p-2 border rounded-lg w-60 m-1" />
+    <input id="nomor" type="text" placeholder="Nomor WhatsApp" class="p-2 border rounded-lg w-60 m-1" />
+  </section>
+
+  <!-- Produk -->
+  <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div class="bg-white p-4 rounded-2xl shadow-lg">
+      <img src="https://files.catbox.moe/47fgc3.jpg" class="rounded-xl mb-4"/>
+      <h3 class="text-xl font-bold">Paket Premium JB</h3>
+      <p class="text-sm text-gray-600 mb-2">Rp5rb.000</p>
+      <button onclick="beli('nomor kosong', '5000')" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-full">
+        Beli Sekarang
+      </button>
+    </div>
+  </main>
+
+  <!-- Popup QRIS & WA -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl w-80 text-center">
+      <h2 class="text-xl font-bold mb-2">Scan QRIS untuk Pembayaran</h2>
+      <img src="https://files.catbox.moe/7yn7rk.jpg" alt="QRIS" class="mx-auto mb-4"/>
+      <p class="text-sm mb-3 text-gray-600">Setelah bayar, klik tombol di bawah 👇</p>
+      <a id="waLink" target="_blank" class="block bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded-full mb-2">
+        KALO SUDAH BAYAR – KIRIM BUKTI SS KE ADMIN
+      </a>
+      <button onclick="tutup()" class="text-sm text-gray-600 underline">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function beli(namaProduk, harga) {
+      const nama = document.getElementById('nama').value;
+      const nomor = document.getElementById('nomor').value;
+
+      if (!nama || !nomor) {
+        alert("Mohon isi nama dan nomor WhatsApp dulu!");
+        return;
+      }
+
+      const pesan = `BANG GW UDAH BAYAR NIH Rp${harga} untuk *${namaProduk}*.\nNama: ${nama}\nNo WA: ${nomor}`;
+      const waURL = `https://wa.me/6281770775840?text=${encodeURIComponent(pesan)}`; // GANTI NOMOR ADMIN
+
+      document.getElementById("waLink").href = waURL;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function tutup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html> 
+
+                                                 <!-- Produk -->
+  <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div class="bg-white p-4 rounded-2xl shadow-lg">
+      <img src="https://files.catbox.moe/47fgc3.jpg" class="rounded-xl mb-4"/>
+      <h3 class="text-xl font-bold">Paket Premium JB</h3>
+      <p class="text-sm text-gray-600 mb-2">Rp5rb.000</p>
+      <button onclick="beli('nomor kosong', '5000')" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-full">
+        Beli Sekarang
+      </button>
+    </div>
+  </main>
+
+  <!-- Popup QRIS & WA -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl w-80 text-center">
+      <h2 class="text-xl font-bold mb-2">Scan QRIS untuk Pembayaran</h2>
+      <img src="https://files.catbox.moe/7yn7rk.jpg" alt="QRIS" class="mx-auto mb-4"/>
+      <p class="text-sm mb-3 text-gray-600">Setelah bayar, klik tombol di bawah 👇</p>
+      <a id="waLink" target="_blank" class="block bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded-full mb-2">
+        KALO SUDAH BAYAR – KIRIM BUKTI SS KE ADMIN
+      </a>
+      <button onclick="tutup()" class="text-sm text-gray-600 underline">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function beli(namaProduk, harga) {
+      const nama = document.getElementById('nama').value;
+      const nomor = document.getElementById('nomor').value;
+
+      if (!nama || !nomor) {
+        alert("Mohon isi nama dan nomor WhatsApp dulu!");
+        return;
+      }
+
+      const pesan = `BANG GW UDAH BAYAR NIH Rp${harga} untuk *${namaProduk}*.\nNama: ${nama}\nNo WA: ${nomor}`;
+      const waURL = `https://wa.me/6281770775840?text=${encodeURIComponent(pesan)}`; // GANTI NOMOR ADMIN
+
+      document.getElementById("waLink").href = waURL;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function tutup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
